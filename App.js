@@ -17,7 +17,6 @@ export default function App() {
 
   addDigit = n => {
 
-
     const clearDisplay = this.state.displayValue === '0' // se o display estiver = '0' ira subtituir pelo numero clicado 
       || this.state.clearDisplay
 
