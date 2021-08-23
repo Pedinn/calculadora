@@ -5,19 +5,19 @@ import Button from './src/componets/Button'
 import Display from './src/componets/Display'
 
 const initialState = {
-  displayValue: '0',  // display começa com 0
-  clearMemory: false, // vai dizer se o display precisar ser limpo no proximo digito ou se nao precisa ser limpo (false = display nao vai ser limpo quando clicar no novo digito) - (true = quando clicar num novo digito o display vai ser limpo)
-  operation: null,    // variavel que armazena o tipo de operação foi setada ( +, -, *, /, =)
-  values: [0, 0],     // array de valores com indice 0 e indice 1
-  current: 0,         // setando o indice 0 ou indice 1
+  displayValue: '0',  
+  clearMemory: false, 
+  operation: null,    
+  values: [0, 0],     
+  current: 0,         
 }
 
 export default function App() {
-  state = { ...initialState } // state vai usar o initialState que vai pegar todos os atributos acima e setar dentro do objeto que representa o estado 
+  state = { ...initialState } 
 
   addDigit = n => {
 
-    const clearDisplay = this.state.displayValue === '0' // se o display estiver = '0' ira subtituir pelo numero clicado 
+    const clearDisplay = this.state.displayValue === '0' 
       || this.state.clearDisplay
 
     if (n === '.' && !clearDisplay && this.state.displayValue.includes('.')) {
@@ -52,7 +52,7 @@ export default function App() {
         values[0] = this.state.values[0]
       }
 
-      values[1] = 0 // sempre que setar uma nova operação o valor do indice [1] sera zerado, para ficar pronto para um novo valor
+      values[1] = 0 
       this.setState({
         displayValue: `${values[0]}`,
         operation: equals ? null : operation,
