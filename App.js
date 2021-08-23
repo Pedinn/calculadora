@@ -85,7 +85,7 @@ export default function App() {
       <Button label='0' double onClick={this.addDigit} />
       <Button label='.' onClick={this.addDigit} />
       <Button label='=' operation onClick={this.setOperation} />
-      <StatusBar style="light" />
+      <StatusBar style="auto" />
     </View>
   </View>
   );
