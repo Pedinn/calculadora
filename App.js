@@ -42,7 +42,7 @@ export default function App() {
 
   setOperation = operation => {
     if (this.state.current === 0) {
-      this.setState({ operation, current: 1, clearDisplay: true })
+      setState({ operation, current: 1, clearDisplay: true })
     } else {
       const equals = operation === '='
       const values = [...this.state.values]
